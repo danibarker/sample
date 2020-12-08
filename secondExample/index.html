@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="filter.js"></script>
+
+</head>
+<body onLoad="loadPage()">
+    <div>
+        <select onChange="filterResources()" id="resourceDropDown1">
+            <option id="all" selected="selected" value="all">All</option>
+        </select>
+        <select onChange="filterResources()" id="resourceDropDown2">
+        </select>
+    </div>
+
+    <div id="container">
+        
+    </div><button onClick="clearFilter()">Clear filter</button>
+</body>
+</html>
+

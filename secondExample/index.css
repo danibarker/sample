@@ -1,0 +1,14 @@
+.desc {
+    font-size: 20px;
+}
+
+.resource {
+    font-size: 40px;
+}
+
+.hidden {
+    visibility: hidden;
+    position: absolute;
+    
+}
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="filter.js"></script>
+
+</head>
+<body>
+    <div>
+        <select onChange="filterResources()" id="resourceDropDown">
+            <option value="depression">Depression</option>
+            <option value="anxiety">Anxiety</option>
+            <option value="stress">Stress</option>
+            <option value="mindfulness">Mindfulness</option>
+            <option value="productivity">Productivity</option>
+            <option value= "all">All</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <div id="depression" class="resource">Depression
+            <div class="desc">These are depression resources</div>
+        </div>
+
+        <div id="anxiety" class="resource">Anxiety
+            <div class="desc">These are anxiety resources</div>
+        </div>
+        <div id="stress" class="resource">Stress
+            <div class="desc">These are stress resources</div>
+        </div>
+        <div id="mindfulness" class="resource">Mindfulness
+            <div class="desc">These are mindfulness resources</div>
+        </div>
+        <div id="productivity" class="resource">Productivity
+            <div class="desc">These are productivity resources</div>
+        </div>
+    </div>
+</body>
+</html>
+
