@@ -1,0 +1,25 @@
+.desc {
+    font-size: 20px;
+}
+
+/* .resource {
+    font-size: 40px;
+} */
+
+.dropdown {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: x-large;
+    margin: 40px;
+}
+.card {
+    max-width: 50%;
+}
+.card img {
+    border-radius: 20px;
+}
+.hidden {
+    visibility: hidden;
+    position: absolute;
+    
+}

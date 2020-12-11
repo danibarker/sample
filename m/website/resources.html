@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Resources</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="/css/utilities.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/resources.css" />
+        <script src="resources.js"></script>
+    </head>
+
+    <body onload="fetchResources()">
+        <div class="navbar">
+            <div class="container flex">
+                <h1><a href='index.html' class="logo">MentalHealthYYC</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="questionnaire.html">Questionnaire</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="dropdown">
+            <select onChange="filterResources()" id="resourceDropDown1">
+                <option value="all">All</option>
+                <option value="depression">Depression</option>
+                <option value="anxiety">Anxiety</option>
+                <option value="stress">Stress</option>
+                <option value="mindfulness">Mindfulness</option>
+                <option value="productivity">Productivity</option>
+                <option value="substanceuse">
+                    Substance Use and Addiction
+                </option>
+                <option value="trauma">Trauma</option>
+                <option value="chronicpain">Chronic Pain</option>
+                <option value="chronicillness">Chronic Illness</option>
+                <option value="loneliness">Loneliness</option>
+                <option value="eatingdisorders">Eating Disorders</option>
+                <option value="suicide">Suicide Prevention</option>
+            </select>
+            <select onChange="filterResources()" id="resourceDropDown2">
+                <option value="depression">Depression</option>
+                <option value="anxiety">Anxiety</option>
+                <option value="stress">Stress</option>
+                <option value="mindfulness">Mindfulness</option>
+                <option value="productivity">Productivity</option>
+                <option value="substanceuse">
+                    Substance Use and Addiction
+                </option>
+                <option value="trauma">Trauma</option>
+                <option value="chronicpain">Chronic Pain</option>
+                <option value="chronicillness">Chronic Illness</option>
+                <option value="loneliness">Loneliness</option>
+                <option value="eatingdisorders">Eating Disorders</option>
+                <option value="suicide">Suicide Prevention</option>
+            </select>
+        </div>
+
+        <div class="container">
+            <h2 id="depressiont" class="resourceTitle">Depression</h2>
+            <div id="depression" class="resource card-group"></div>
+            <h2 id="anxietyt" class="resourceTitle">Anxiety</h2>
+            <div id="anxiety" class="resource card-group"></div>
+            <h2 id="stresst" class="resourceTitle">Stress</h2>
+            <div id="stress" class="resource card-group"></div>
+            <h2 id="mindfulnesst" class="resourceTitle">Mindfulness</h2>
+            <div id="mindfulness" class="resource card-group"></div>
+            <h2 id="substanceuset" class="resourceTitle">
+                Substance Use and Addiction
+            </h2>
+            <div id="substanceuse" class="resource card-group"></div>
+            <h2 id="traumat" class="resourceTitle">Trauma</h2>
+            <div id="trauma" class="resource card-group"></div>
+            <h2 id="chronicpaint" class="resource">Chronic Pain</h2>
+            <div id="chronicpain" class="resource card-group"></div>
+            <h2 id="lonelinesst" class="resource">Loneliness</h2>
+            <div id="loneliness" class="resource card-group"></div>
+            <h2 id="eatingdisorderst" class="resource">Eating Disorders</h2>
+            <div id="eatingdisorders" class="resource card-group"></div>
+            <h2 class="resource">Suicide Prevention</h2>
+            <div id="suicide" class="resource card-group"></div>
+        </div>
+    </body>
+</html>
+
+<!--  <div class='card info text-center d-none' id="audioInfo">
+        <div class="card-body">
+            <h2>Affirmation Pod</h2>
+            <p>A podcast meant to help people accept themsleves through self affirmation and positivity</p>
+            <a href='https://www.affirmationpod.com'>https://www.affirmationpod.com</a>
+            <h2 class='mt-5'>Train the Mind</h2>
+            <p>A daily podcast about mental wellness</p>
+            <a href='https://open.spotify.com/show/5ulnZFwoLkEv566YCZwTvY'>https://open.spotify.com/show/5ulnZFwoLkEv566YCZwTvY</a>
+            <h2 class='mt-5'>Coffitivity</h2>
+            <p>A website that plays coffee shop sounds to help with focus</p>
+            <a href='https://coffitivity.com'>https://coffitivity.com</a>
+        </div>
+    </div>
+
+     <div class='card info text-center d-none' id="videoInfo">
+        <div class="card-body">
+            <h2>A Ten Minute Guided Meditation to Clear Your Mind</h2>
+            <p>This 10 minute guided meditation is an effective way to eliminate overthinking by clearing your mind, allowing yourself to relax and get settled into the moment.</p>
+            <a href='https://www.youtube.com/watch?v=ez3GgRqhNvA'>https://www.youtube.com/watch?v=ez3GgRqhNvA</a>
+            <h2 class='mt-5'>10-Minute Yoga For Self Care - Yoga With Adriene</h2>
+            <p>10 min Yoga For Self Care invites you to take 10 min of your day to practice self care and love of self. We spend a lot of time on our phones, computers, in traffic, working, and taking care of others. Take TEN to tend to your mind and body with this practice that combines yoga asana, breath, and massage.</p>
+            <a href='https://youtu.be/VpW33Celubg?list=PLui6Eyny-UzwiUzvhM2BjxThodiRWZ2JR'>https://youtu.be/VpW33Celubg?list=PLui6Eyny-UzwiUzvhM2BjxThodiRWZ2JR</a>
+            <h2 class='mt-5'>The gift and power of emotional courage TedTalk</h2>
+            <p>Psychologist Susan David shares how the way we deal with our emotions shapes everything that matters: our actions, careers, relationships, health and happiness. In this deeply moving, humorous and potentially life-changing talk, she challenges a culture that prizes positivity over emotional truth and discusses the powerful strategies of emotional agility. A talk to share.</p>
+            <a href='https://www.ted.com/talks/susan_david_the_gift_and_power_of_emotional_courage?referrer=playlist-how_to_practice_emotional_first_aid'>https://www.ted.com/talks/susan_david_the_gift_and_power_of_emotional_courage?referrer=playlist-how_to_practice_emotional_first_aid</a>
+        </div>
+    </div> 
+
+     <div class='card info text-center d-none' id="phoneInfo">
+        <div class="card-body">
+            <h2>CANADIAN MENTAL HEALTH ASSOCIATION (CMHA)</h2>
+            <p>The CMHA is a non-profit organization that builds awareness about mental health and provides individuals dealing with mental health issues with advocacy, education, housing, counselling and a variety of programs. Whether you or a family member are dealing with substance abuse, mental health challenges or even the loss of a loved one, the CMHA Calgary chapter can help with emotional support, life coaching and programming, as well as referrals to other community resources.</p>
+            <a href='tel:403-297-1700'>403-297-1700</a><br>
+            <a href='http://cmha.calgary.ab.ca'>http://cmha.calgary.ab.ca</a>
+            <h2 class='mt-5'>DISTRESS CENTRE</h2>
+            <p>The Distress Centre is a 24-hour crisis line available in Calgary and Southern Alberta. This resource is useful if you need someone to talk to or recommended resources when you are in a crisis situation. The best way to describe the Distress Centre is to use their own words: “We do not define crisis. We do not judge. Anyone can call us day or night.” The Distress Centre can be contacted by phone, email or online chat during the day.</p>
+            <a href='tel:403-266-4357'>403-266-HELP</a><br>
+            <a href='https://www.distresscentre.com/'>https://www.distresscentre.com/</a>
+            <h2 class='mt-5'>ADDICTION HELPLINE</h2>
+            <p>The Addiction Helpline is available 24/7 and is available for any Albertan suffering from addiction. The helpline is confidential and provides support and referral to community services for individuals suffering from alcohol, drug and gambling issues.</p>
+            <a href='tel:1-866-332-2322'>1-866-332-2322</a>
+            <h2 class='mt-5'>ADDICTION HELPLINE</h2>
+            <p>The Addiction Helpline is available 24/7 and is available for any Albertan suffering from addiction. The helpline is confidential and provides support and referral to community services for individuals suffering from alcohol, drug and gambling issues.</p>
+            <a href='tel:1-866-332-2322'>1-866-332-2322</a>
+            <h2 class='mt-5'>URGENT MENTAL HEALTH IN URGENT CARE</h2>
+            <p>Crisis mental health assessment and support is available at two of the Urgent Care Centres in Calgary:</p>
+            <p>Sheldon M. Chumir Health Centre (SMCHC), located in the Beltline</p>
+            <p>South Calgary Health Centre (SCHC), located in the far south near Shawnessy/Sundance</p>
+            <p>Both centres are open 7 days per week, every day of the year, with SMCHC being open 24 hours per day and SCHC open from 8 am – 10 pm. Urgent Mental Health assistance is available at both sites from 8 am – 10 pm every day. SCHC also provides walk-in, single session counselling at no fee with variable hours during the week.</p>
+            <a href='tel:403-943-9300'>Call 403-943-9300 to find out the hours of their walk-in counselling service.</a>
+        </div>
+    </div>
+
+     <div class='card info text-center d-none' id="websiteInfo">
+        <div class="card-body">
+            <h2>Depression chat rooms</h2>
+            <p>This website is dedicated to depression and anxiety peer support. The main forms of communication we offer are via our supportive Depression Chat Rooms, Depression Forums and our Depression Blog section.</p>
+            <a href='http://www.depression-chat-rooms.org'>http://www.depression-chat-rooms.org</a>
+            <h2 class='mt-5'>Turn2Me.ie</h2>
+            <p>We are a community of fully qualified and accredited mental health professionals working online to provide a high quality, safe, anonymous and confidential space for you to gain support - wherever you are, whenever you need us, for whatever you are going through.</p>
+            <a href='https://turn2me.ie'>https://turn2me.ie</a>
+            <h2 class='mt-5'>The Good Limbo mental health community</h2>
+            <p>The Good Limbo is an online mental health community for peer-based support. We have forums and a Discord chat server where you can talk to others who understand. Whether you want to seek support, or just need a distraction, we’re here for you.</p>
+            <a href='https://thegoodlimbo.com'>https://thegoodlimbo.com</a>
+        </div>
+    </div>
+
+     <div class='card info text-center d-none' id="writtenInfo">
+        <div class="card-body">
+            <h2>Stress.org Blog</h2>
+            <p>A series of blogposts about stress and stress management</p>
+            <a href='https://www.stress.org/blog'>https://www.stress.org/blog</a>
+            <h2 class='mt-5'>CMHA blog</h2>
+            <p>Balance is CMHA Calgary mental health blog, which aims to raise awareness, provide hope, build community and promote mental wellness through personal stories, mental health tips and information, expert opinions and community insights.</p>
+            <a href='https://cmha.calgary.ab.ca/balance-blog/'>https://cmha.calgary.ab.ca/balance-blog/</a>
+        </div>
+    </div>
+ 
+
+ <div class='card info text-center d-none' id="otherInfo">
+    <div class="card-body">
+        <h2>Superbetter</h2>
+        <p>A website meant to gameify mental health.</p>
+        <a href='https://www.superbetter.com'>https://www.superbetter.com</a>
+        <h2 class='mt-5'>Checkpoint's List of Games for wellbeing</h2>
+        <p>A collection of games voted by people that have helped them with their mental wellbeing.</p>
+        <a href='https://checkpointorg.com/games-for-health/'>https://checkpointorg.com/games-for-health/</a>
+        <h2 class='mt-5'>University of Calgary Mindfulness Online</h2>
+        <p>University of Calgary's self directed mentla wellness program</p>
+        <a href='https://www.ucalgary.ca/wellness-services/staying-healthy/learning/self-help-resources/mindfulness-online'>https://www.ucalgary.ca/wellness-services/staying-healthy/learning/self-help-resources/mindfulness-online</a>
+    </div>
+  </div>
+
+</body>
+
+</html> -->
